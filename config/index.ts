@@ -60,6 +60,9 @@ export default defineConfig<"webpack5">(async (merge, { command, mode }) => {
           },
         },
       },
+      optimizeMainPackage: {
+        enable: true,
+      },
       webpackChain(chain) {
         chain.resolve.plugin("tsconfig-paths").use(TsconfigPathsPlugin);
         chain.plugin("unplugin-vue-components").use(
