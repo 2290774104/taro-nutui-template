@@ -6,9 +6,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const show = ref(false)
+import { ref } from "vue";
+import { httpGetAccessToken } from "@/api/user";
+const show = ref(false);
 const onClick = () => {
-  show.value = true
-}
+  httpGetAccessToken({
+    grant_type: "client_credential",
+    appid: "wx665a301270bee838",
+    secret: "f41feef82d699ff4cb53336fd0766dc0",
+  });
+};
 </script>

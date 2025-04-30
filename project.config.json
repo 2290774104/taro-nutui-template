@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "taro-nutui-template",
   "description": "taro-nutui 项目模板",
-  "appid": "touristappid",
+  "appid": "wx48693f4d7dff8da7",
   "setting": {
     "urlCheck": true,
     "es6": false,

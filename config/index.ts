@@ -4,7 +4,7 @@ import devConfig from "./dev";
 import prodConfig from "./prod";
 import NutUIResolver from "@nutui/auto-import-resolver";
 import Components from "unplugin-vue-components/webpack";
-import path from "path";
+import path from 'path'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<"webpack5">(async (merge, { command, mode }) => {
@@ -27,9 +27,9 @@ export default defineConfig<"webpack5">(async (merge, { command, mode }) => {
     },
     sourceRoot: "src",
     outputRoot: "dist",
-    plugins: ["@tarojs/plugin-html", "@tarojs/plugin-http"],
+    plugins: ["@tarojs/plugin-html"],
     alias: {
-      "@": path.resolve(__dirname, "..", "src"),
+      '@': path.resolve(__dirname, '..', 'src')
     },
     defineConstants: {},
     copy: {
