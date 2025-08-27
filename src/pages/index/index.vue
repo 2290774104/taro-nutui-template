@@ -8,12 +8,11 @@
 <script setup>
 import { ref } from "vue";
 import { httpGetAccessToken } from "@/api/user";
+import Taro from "@tarojs/taro";
 const show = ref(false);
 const onClick = () => {
-  httpGetAccessToken({
-    grant_type: "client_credential",
-    appid: "wx665a301270bee838",
-    secret: "f41feef82d699ff4cb53336fd0766dc0",
+  Taro.navigateTo({
+    url: "/pages/list/index",
   });
 };
 </script>
