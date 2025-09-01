@@ -8,11 +8,12 @@
 <script setup>
 import { ref } from "vue";
 import { httpGetAccessToken } from "@/api/user";
-import Taro from "@tarojs/taro";
+import router from "@/router";
+
 const show = ref(false);
 const onClick = () => {
-  Taro.navigateTo({
-    url: "/pages/list/index",
+  router.navigateTo({
+    url: "../list/index?id=1",
   });
 };
 </script>
